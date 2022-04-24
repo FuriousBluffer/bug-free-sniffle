@@ -4,13 +4,13 @@ pipeline {
     stage("Testing") {
       steps {
         echo "running super tests"
-        bat "mvn test"
+        sh "mvn test"
       }
     }
     stage("Build") {
       steps {
         echo "building it up"
-        bat "mvn package"
+        sh "mvn package"
       }
     }
   }
